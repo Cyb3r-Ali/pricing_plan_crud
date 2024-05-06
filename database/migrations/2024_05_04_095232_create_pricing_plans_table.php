@@ -15,9 +15,9 @@ class CreatePricingPlansTable extends Migration
     {
         Schema::create('pricing_plans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
+            $table->string('title');
             $table->decimal('price', 10, 2);
+            $table->text('description')->nullable(); // Add description field
             $table->timestamps();
         });
     }
